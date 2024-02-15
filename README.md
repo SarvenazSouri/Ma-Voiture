@@ -3,4 +3,4 @@ This project is a static website that includes home page, catalog, details and c
 
 ## instruction
 Use Visual Studio Code
-1. run the file index.html
+1. Run the file index.html
