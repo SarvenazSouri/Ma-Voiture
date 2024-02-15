@@ -1,0 +1,958 @@
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('fonts/ShrikhandRegular.eot');
+    src: url('fonts/ShrikhandRegular.eot') format('embedded-opentype'),
+        url('fonts/ShrikhandRegular.woff2') format('woff2'),
+        url('fonts/ShrikhandRegular.woff') format('woff'),
+        url('fonts/ShrikhandRegular.ttf') format('truetype'),
+        url('fonts/ShrikhandRegular.svg#ShrikhandRegular') format('svg');
+}
+
+body {
+    margin: 0;
+}
+
+body>div {
+    background-color: #D8F1A0;
+}
+
+header {
+    background-color: #ECE5F0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 70%;
+    align-items: center;
+}
+
+header div img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 5px;
+}
+
+header form {
+    display: flex;
+    margin-left: 10px;
+}
+
+header form input {
+    position: relative;
+    display: block;
+    height: 25px;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header form div:first-child input {
+    width: 60px;
+}
+
+header form div:last-child input {
+    width: 50px;
+}
+
+header div>div {
+    font-family: 'Shrikhand';
+    font-size: 1.4em;
+    justify-content: center;
+}
+
+nav>div a {
+    text-decoration: none;
+}
+
+header input {
+    position: absolute;
+    left: 1px;
+    top: -10px;
+    width: 36px;
+    height: 36px;
+    appearance: none;
+}
+
+nav>input:checked~.mobile-menu span {
+    display: block;
+    text-align: center;
+}
+
+.mobile-menu span {
+    border: 1px solid black;
+    width: 40px;
+    margin: 2px;
+    height: 2px;
+    background-color: black;
+}
+
+nav>input:checked~.desktop-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 400px;
+    width: 100px;
+}
+
+.desktop-menu a:hover {
+    color: black;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-menu span {
+    width: 500px;
+}
+
+a {
+    color: #080357;
+}
+
+.desktop-menu span a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: right;
+    background-color: #ECE5F0;
+}
+
+nav {
+    position: relative;
+}
+
+main {
+    padding: 10px 5px;
+}
+
+footer {
+    background: linear-gradient(to right, #89a0b3, #ECE5F0);
+    margin-top: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: top;
+    height: 140px;
+}
+
+footer img {
+    height: 50px;
+}
+
+footer img:hover {
+    filter: drop-shadow(2px 2px 5px black);
+}
+
+footer>div:first-child {
+    width: 200px;
+    height: 100px;
+}
+
+footer iframe {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+footer div:nth-of-type(2) div {
+    margin: 0 0 5px 0;
+}
+
+footer div:nth-of-type(1) {
+    margin-left: 5px;
+}
+
+footer div:nth-of-type(2) {
+    text-align: right;
+    margin-right: 5px;
+}
+
+/* css - index */
+
+.home .desktop-menu span:first-child a {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.home nav>input:checked~.desktop-menu {
+    z-index: 2;
+}
+
+.home main h1 {
+    font-family: 'Shrikhand';
+}
+
+.home .slider {
+    border: 1px solid black;
+    position: relative;
+    width: 422px;
+    height: 312px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 40px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.home .slider-container {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    animation: carousel 15s infinite;
+}
+
+.home .slider-container img {
+    float: left;
+    width: 33.33%;
+    height: auto;
+}
+
+@keyframes carousel {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    40% {
+        left: -100%;
+    }
+
+    60% {
+        left: -100%;
+    }
+
+    80% {
+        left: -200%;
+    }
+
+    100% {
+        left: -200%;
+    }
+}
+
+.home aside {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.home aside div:first-child, .detail aside div:first-child {
+    font-family: 'Shrikhand';
+    font-size: 20px;
+}
+
+.home aside div+div {
+    margin-bottom: 10px;
+}
+
+.home aside p {
+    margin: 5px auto;
+}
+
+.home aside a {
+    text-decoration: none;
+}
+
+.home aside a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.home aside img {
+    width: 100%;
+    border-top: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+/* css - formulaire */
+.formulaire .desktop-menu span:last-child a {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.formulaire * {
+    box-sizing: border-box;
+}
+
+.formulaire label, .formulaire .dataList p {
+    display: none;
+}
+
+.formulaire input:not(header form input) {
+    width: 80%;
+    height: 2rem;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.formulaire fieldset {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.formulaire form h1 {
+    font-family: 'Shrikhand';
+}
+
+.formulaire .radioButton>div:first-child>label {
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-align: start;
+    margin-bottom: 15px;
+}
+
+.formulaire .radioButton>div:nth-child(n+2)>label {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    text-align: start;
+}
+
+.formulaire .radioButton>div:nth-child(n+2)>input {
+    display: inline-block;
+    width: 30%;
+    margin: auto;
+    text-align: end;
+}
+
+.formulaire textarea {
+    width: 80%;
+}
+
+.formulaire .aside {
+    text-align: center;
+}
+
+.formulaire .aside img:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.formulaire ul {
+    list-style: none;
+}
+
+.formulaire ul li {
+    display: inline-block;
+}
+
+.formulaire ul li img {
+    width: 70vw;
+}
+
+.formulaire fieldset {
+    background-color: rgb(173, 216, 230);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+/*css - detail*/
+
+.detail .desktop-menu span:nth-of-type(2) a {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.detail article {
+    display: none;
+}
+
+.detail article:target {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.detail article div:first-of-type h2 {
+    font-family: 'Shrikhand';
+    margin-bottom: 5px;
+}
+
+.detail article div h2+div {
+    font-size: 20px;
+}
+
+.detail article div:nth-of-type(1) a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-color: #ECE5F0;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.detail article div:nth-of-type(1) a:hover {
+    color: black;
+    box-shadow: 2px 2px 5px black;
+}
+
+.detail article>div {
+    margin-bottom: 10px;
+}
+
+.detail main input[type='checkbox'] {
+    display: none;
+}
+
+.detail .lbl-toggle {
+    display: block;
+
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 1rem;
+
+    color: #080357;
+    background: #ECE5F0;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+
+.detail .lbl-toggle:hover {
+    color: black;
+}
+
+.detail .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.detail .collapsible-content .content-inner {
+    background: rgba(250, 224, 66, .2);
+    border-bottom: 1px solid rgba(250, 224, 66, .45);
+
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+}
+
+.detail .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: max-height 1.5s ease-in-out;
+}
+
+.detail .toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 100vh;
+}
+
+.detail .toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.detail .toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.detail .wrap-collabsible:last-child .content-inner {
+    text-align: center;
+}
+
+.detail aside {
+    display: grid;
+    grid-template-areas:
+        "titre titre"
+        "image1 image2"
+        "image3 image4";
+}
+
+.detail aside div:nth-of-type(1) {
+    grid-area: titre;
+}
+
+.detail aside div:nth-of-type(2) {
+    grid-area: image1;
+}
+
+.detail aside div:nth-of-type(3) {
+    grid-area: image2;
+}
+
+.detail aside div:nth-of-type(4) {
+    grid-area: image3;
+}
+
+.detail aside div:nth-of-type(5) {
+    grid-area: image4;
+}
+
+.detail aside div+div {
+    margin: 10px;
+}
+
+.detail aside img {
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.detail aside img:hover {
+    box-shadow: 2px 2px 5px black;
+}
+
+/* css catalogue */
+.catalogue .desktop-menu span:nth-of-type(2) a {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.catalogue section {
+    max-height: 70vh;
+    overflow: scroll;
+    justify-items: center;
+}
+
+
+.catalogue section img {
+    width: 100vw;
+    height: 70vh;
+}
+
+.catalogue main {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.catalogue aside {
+    max-height: 30vh;
+    overflow: auto;
+}
+
+.catalogue aside img {
+    max-height: 10vh;
+    position: absolute;
+    top: -12px;
+    right: 5px;
+}
+
+.catalogue aside img:hover {
+    top: 10px;
+    right: 20px;
+    transform: scale(3);
+}
+
+.catalogue aside div>p:first-of-type {
+    color: red;
+}
+
+.catalogue aside div {
+    border-bottom: 1px solid black;
+}
+
+.catalogue aside div {
+    position: relative;
+}
+
+
+
+@media only screen and (min-width:768px) {
+
+    header>div {
+        justify-content: start;
+    }
+
+    header div>div {
+        font-size: 1.5em;
+    }
+
+    header form {
+        flex-direction: column;
+    }
+
+    header form div:first-child input {
+        width: 100px;
+    }
+
+    header form div:last-child input {
+        width: 58px;
+    }
+
+    header input {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: block;
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu span {
+        width: 100px;
+    }
+
+    .desktop-menu span a {
+        text-align: center;
+    }
+
+    main {
+        padding: auto 10px;
+    }
+
+    footer {
+        padding: 10px;
+        height: 190px;
+    }
+
+    footer>div:first-child {
+        width: 400px;
+        height: 150px;
+    }
+
+    footer iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* css - index*/
+    .home main {
+        display: grid;
+        grid-template-areas:
+            "h1 h1"
+            "caroussel aside";
+    }
+
+    .home h1 {
+        grid-area: h1;
+    }
+
+    .home .slider {
+        grid-area: caroussel;
+        width: 600px;
+        height: 450px;
+        margin-right: 20px;
+    }
+
+    .home .slider-container {
+        position: absolute;
+        width: 300%;
+        height: 100%;
+        animation: carousel 15s infinite;
+    }
+
+    .home aside {
+        grid-area: aside;
+        height: 460px;
+        overflow-y: scroll;
+    }
+
+    .formulaire main {
+        display: flex;
+        margin: auto;
+    }
+
+    .formulaire section {
+        flex-basis: 60vw;
+        display: inline-block;
+    }
+
+
+    .formulaire aside {
+        flex-basis: 35vw;
+        display: inline-block;
+        align-self: center;
+        align-content: space-around;
+    }
+
+
+    .formulaire main aside ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulaire main aside ul img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .formulaire fieldset {
+        width: 70vw;
+    }
+
+    .formulaire fieldset div {
+        display: inline-block;
+        width: 25vw;
+        margin: 20px;
+    }
+
+    .formulaire fieldset div label {
+        display: inline-block;
+        width: 25%;
+    }
+
+    .formulaire fieldset div input {
+        width: 70%;
+    }
+
+    .formulaire fieldset>.radioButton>div:first-child {
+        display: block;
+    }
+
+    .formulaire fieldset>.radioButton>div:nth-child(n+2) {
+        display: inline-block;
+        width: 30%;
+    }
+
+    .formulaire fieldset>div:nth-child(-n+4)>label::after {
+        content: "*";
+        color: red;
+    }
+
+    .formulaire fieldset input[type="submit"] {
+        width: 50%;
+    }
+
+    /* css - detail*/
+    .detail article:target {
+        display: inline-block;
+    }
+
+    .detail main {
+        display: flex;
+    }
+
+    .detail article>div:first-of-type {
+        display: inline-block;
+        width: 360px;
+        vertical-align: bottom;
+    }
+
+    .detail .wrap-collabsible {
+        display: block;
+    }
+
+    .detail article img {
+        width: 220px;
+    }
+
+    .detail aside {
+        grid-template-areas:
+            "titre "
+            "image1"
+            "image2"
+            "image3"
+            "image4";
+        height: 350px;
+        overflow-y: scroll;
+    }
+
+    .detail aside div+div {
+        text-align: center;
+    }
+
+    .detail aside img {
+        width: 80%;
+    }
+
+    /*  catalogue*/
+
+    .catalogue main {
+        flex-direction: row;
+        height: 70%;
+    }
+
+    .catalogue section {
+        flex-basis: 60%;
+    }
+
+    .catalogue section article {
+        width: 50%;
+    }
+
+    .catalogue section article img {
+        width: 29vw;
+    }
+
+    .catalogue section img:hover {
+        transform: scale(1.2);
+    }
+
+    .catalogue section {
+        display: flex;
+    }
+
+    .catalogue aside {
+        flex-basis: 40%;
+        max-height: 70vh;
+        overflow: auto;
+    }
+
+    .catalogue aside div {
+        height: 80vh;
+    }
+
+
+    .catalogue aside img {
+        position: static;
+        box-shadow: 3px 3px 24px darkolivegreen;
+        max-height: 38vh;
+        float: left;
+        margin-right: 1%;
+        ;
+    }
+
+    .catalogue aside img:hover {
+        transform: none;
+    }
+
+
+}
+
+@media only screen and (min-width:992px) {
+
+    header div:first-child {
+        justify-content: space-between;
+    }
+
+    header form {
+        flex-direction: row;
+    }
+
+    header form div:first-child input {
+        width: 200px;
+    }
+
+    .desktop-menu span {
+        width: 115px;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    footer>div:first-child {
+        width: 600px;
+        height: 200px;
+    }
+
+    footer iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* index */
+
+    .home main h1 {
+        margin-left: 12%;
+    }
+
+    .home .slider {
+        width: 700px;
+        height: 525px;
+    }
+
+    .home aside {
+        max-width: 300px;
+        height: 530px;
+    }
+
+    .home aside div+div {
+        padding: 5px;
+    }
+
+    .home aside img {
+        border: 1px solid rgb(0, 0, 0, 0.2);
+    }
+
+
+    /* catalogue */
+
+    .catalogue section {
+        flex-wrap: wrap;
+    }
+
+    .catalogue aside {
+        flex-basis: 35%;
+    }
+
+    .catalogue section {
+        flex-basis: 65%;
+    }
+
+    .catalogue section img {
+        width: 45%;
+        height: 90%;
+    }
+
+    .catalogue aside img {
+        position: static;
+        box-shadow: 3px 3px 24px darkolivegreen;
+        max-height: 35vh;
+        float: left;
+        margin-right: 1%;
+        ;
+    }
+
+
+    /* detail */
+
+    .detail article>div:first-of-type {
+        width: 380px;
+    }
+
+    .detail article img {
+        width: 320px;
+    }
+
+    .detail aside {
+        height: 450px;
+        overflow-y: scroll;
+    }
+
+    /* formulaire*/
+    .formulaire aside ul li:last-of-type {
+        display: none;
+    }
+
+    .formulaire .dataList p {
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+    }
+
+
+}
